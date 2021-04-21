@@ -4,7 +4,7 @@
   "description": "GNOME Gtk+ bindings for NodeJS",
   "main": "lib/index.js",
   "scripts": {
-    "install": "if [ \"$(uname)\" = \"Darwin\" ] && [ \"$(which brew)\" != \"\" ]; then export PKG_CONFIG_PATH=$(brew --prefix libffi)/lib/pkgconfig; fi; node-pre-gyp install --fallback-to-build",
+    "install": "node-pre-gyp rebuild",
     "test": "mocha tests/__run__.js",
     "build": "node-pre-gyp build",
     "build:full": "node-pre-gyp rebuild",
